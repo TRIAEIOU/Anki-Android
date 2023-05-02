@@ -308,7 +308,7 @@ open class Card : Cloneable {
 
     open val isEmpty: Boolean
         get() = try {
-            Models.emptyCard(model(), ord, note().fields)
+            false // Models.emptyCard(model(), ord, note().fields)
         } catch (er: TemplateError) {
             Timber.w("Card is empty because the card's template has an error: %s.", er.message(col.context))
             true

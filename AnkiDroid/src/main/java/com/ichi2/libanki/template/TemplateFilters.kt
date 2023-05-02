@@ -37,6 +37,7 @@ object TemplateFilters {
     const val CLOZE_DELETION_REPLACEMENT = "[...]"
     private val fHookFieldMod = Pattern.compile("^(.*?)(?:\\((.*)\\))?$")
     const val CLOZE_REG = "(?si)\\{\\{(c)%s::(.*?)(::(.*?))?\\}\\}"
+    // const val CLOZE_REG = "(?si)\\{\\{(c)%s::(.*?(?:\\{\\{c\\d+::.*?\\}\\})*.*?)(::(.*?))?\\}\\}"
 
     /**
      * @param txtInput The content of the field field_name
