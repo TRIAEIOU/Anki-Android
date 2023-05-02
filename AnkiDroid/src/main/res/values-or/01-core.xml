@@ -102,7 +102,7 @@
     <string name="unbury">ସ୍ଥଗିତରୁ ଫେରାଇ ଆଣ</string>
     <string name="rename_deck">ତାସଖଣ୍ଡ ନାମ ବଦଳାନ୍ତୁ</string>
     <string name="create_shortcut">ସର୍ଟକଟ୍‌ ସୃଷ୍ଟି କରନ୍ତୁ</string>
-    <string name="browse_cards">ପତ୍ରଗୁଡ଼ିକ ବ୍ରାଉଜ୍ କରନ୍ତୁ</string>
+    <string name="browse_cards">ପତ୍ରଗୁଡ଼ିକ ଖେଳାଇବା</string>
     <string name="menu_add" comment="A generic add button. Please inform us if you need more specific strings">ଯୋଡ଼ନ୍ତୁ</string>
     <string name="menu_add_note">ନୋଟ୍ ଯୋଡ଼ନ୍ତୁ</string>
     <string name="menu_my_account" comment="Label of the window in which the user should enter their account. This text can\'t be found in AnkiDroid directly.">ସୀଙ୍କ୍ ଖାତା</string>
@@ -130,8 +130,8 @@
     <string name="menu_mark_note">ନୋଟ ଚିନ୍ହିତ କରନ୍ତୁ</string>
     <string name="menu_unmark_note">ନୋଟ ଅଣଚିନ୍ହିତ କରନ୍ତୁ</string>
     <string name="menu_toggle_mic_tool_bar">ଉଚ୍ଚାରଣ ଯାଞ୍ଚ କରନ୍ତୁ</string>
-    <string name="new_deck">ତାସଖଣ୍ଡ ସୃଷ୍ଟି କରନ୍ତୁ</string>
-    <string name="new_dynamic_deck">ଶୋଧିତ ତାସଖଣ୍ଡ ସୃଷ୍ଟି କରନ୍ତୁ</string>
+    <string name="new_deck">ତାସଖଣ୍ଡ ସୃଷ୍ଟି କରିବା</string>
+    <string name="new_dynamic_deck">ଶୋଧିତ ତାସଖଣ୍ଡ ସୃଷ୍ଟି କରିବା</string>
     <string name="directory_inaccessible">AnkiDroid directory ଅପ୍ରବେଶନୀୟ ଅଟେ</string>
     <!--This is shown when AnkiDroid starts up with no storage permissions.
     The user is taken to the "App Info" screen, and needs to click "Permissions" and
@@ -158,7 +158,7 @@
     <string name="rebuild_filtered_deck">ଶୋଧିତ ତାସଖଣ୍ଡର ପୁନଃନିର୍ମାଣ&#8230;</string>
     <string name="rebuild_cram_label">ପୁନଃନିର୍ମାଣ</string>
     <string name="empty_cram_label">ଖାଲି</string>
-    <string name="create_subdeck">ଉପତାସଖଣ୍ଡ ନିର୍ମାଣ</string>
+    <string name="create_subdeck">ଉପତାସଖଣ୍ଡ ସୃଷ୍ଟି କରିବା</string>
     <string name="empty_filtered_deck">ଶୋଧିତ ତାସଖଣ୍ଡ ଖାଲି ହଉଛି&#8230;</string>
     <string name="custom_study_deck_name">କଷ୍ଟମ୍ ଅଧ୍ୟୟନ ଅଧିବେଶନ</string>
     <string name="custom_study_deck_exists">ପ୍ରଥମେ ଵିଦ୍ୟମାନ କଷ୍ଟମ୍ ଅଧ୍ୟୟନ ତାସଖଣ୍ଡ ର ନାମ ବଦଳାନ୍ତୁ</string>
@@ -242,11 +242,11 @@
     </plurals>
     <string name="copy_note_type_name" comment="The new name of a copied note type">%s ନକଲ</string>
     <!-- Generic errors -->
-    <string name="error__etc__cannot_write_to_or_create_file">Cannot write to or create file %s</string>
+    <string name="error__etc__cannot_write_to_or_create_file">%s ଫାଇଲ୍‌ରେ ଲେଖିହେଉନି କିମ୍ୱା ସୃଷ୍ଟି କରିହେଉନି</string>
     <!-- Scoped storage migration -->
     <string name="migration__migrating_data">Migrating data</string>
-    <string name="migration__calculating_transfer_size">Calculating transfer size&#8230;</string>
-    <string name="migration__transferred_x_of_y" comment="The placeholders will be replaced with short localized byte amounts,         e.g. Transferred 10 kB of 5.2 MB">Transferred %1$s of %2$s</string>
+    <string name="migration__calculating_transfer_size">ଅନ୍ତରଣ ଆକାର ଗଣନା ଚାଲିଛି&#8230;</string>
+    <string name="migration__transferred_x_of_y" comment="The placeholders will be replaced with short localized byte amounts,         e.g. Transferred 10 kB of 5.2 MB">%2$sର %1$s ଅନ୍ତରଣ ହୋଇଛି</string>
     <string name="migration_successful_message" comment="A title for a dialog, or a short message shown in a notification,         when storage migration succeeds">ସ୍ଥାନାନ୍ତରଣ ସଫଳ ହେଲା</string>
     <string name="migration__succeeded__message" comment="A more detailed message shown when storage migration succeeds">        Your data has been migrated successfully.
         AnkiDroid is fully functional again, and you can sync.
@@ -269,6 +269,6 @@
     <string name="install_non_play_store_ankidroid_recommended">Restore folder access (recommended)</string>
     <string name="install_non_play_store_ankidroid">Restore folder access (advanced)</string>
     <string name="restore_data_from_backup">Restore from .colpkg backup (advanced)</string>
-    <string name="create_new_collection">Create a new collection</string>
+    <string name="create_new_collection">ଗୋଟେ ନୂଆ ସଂଗ୍ରହ ସୃଷ୍ଟି କରିବା</string>
     <string name="new_unsafe_collection">The new collection will be deleted from your phone if you uninstall AnkiDroid</string>
 </resources>
