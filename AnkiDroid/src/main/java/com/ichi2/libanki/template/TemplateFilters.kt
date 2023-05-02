@@ -36,8 +36,9 @@ import java.util.regex.Pattern
 object TemplateFilters {
     const val CLOZE_DELETION_REPLACEMENT = "[...]"
     private val fHookFieldMod = Pattern.compile("^(.*?)(?:\\((.*)\\))?$")
-    const val CLOZE_REG = "(?si)\\{\\{(c)%s::(.*?)(::(.*?))?\\}\\}"
-    // const val CLOZE_REG = "(?si)\\{\\{(c)%s::(.*?(?:\\{\\{c\\d+::.*?\\}\\})*.*?)(::(.*?))?\\}\\}"
+
+    // const val CLOZE_REG = "(?si)\\{\\{(c)%s::(.*?)(::(.*?))?\\}\\}"
+    const val CLOZE_REG = "\\{\\{(c)%s::((?:(?=.*?\\{(?!.*?\\2)(.*\\}(?!.*\\3).*))(?=.*?\\}(?!.*?\\3)(.*)).)+?.*?(?=\\2)[^{]*(?=\\3\$)|.*?)(?:::(.*?))?\\}\\}"
 
     /**
      * @param txtInput The content of the field field_name
@@ -143,7 +144,7 @@ object TemplateFilters {
                     CLOZE_DELETION_REPLACEMENT
                 }
             } else {
-                m.group(2)
+                m.group(1) // m.group(2)
             }
             if ("c" == m.group(1)) {
                 buf = "<span class=cloze>$buf</span>"

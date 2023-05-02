@@ -844,7 +844,6 @@ class Models(col: Collection) : ModelManager(col) {
         private val fClozePattern1 = Pattern.compile("\\{\\{[^}]*?cloze:(?:[^}]?:)*(.+?)\\}\\}")
         private val fClozePattern2 = Pattern.compile("<%cloze:(.+?)%>")
         private val fClozeOrdPattern = Pattern.compile("(?si)\\{\\{c(\\d+)::.*?\\}\\}")
-        // private val fClozeOrdPatternNo = Pattern.compile("(?si)\\{\\{c(\\d+)::")
 
         @KotlinCleanup("Use triple quotes for this properties and maybe `@language('json'')`")
         const val DEFAULT_MODEL = (
@@ -936,7 +935,6 @@ class Models(col: Collection) : ModelManager(col) {
                 // For cloze, getting the list of cloze numbes is linear in the size of the template
                 // So computing the full list is almost as efficient as checking for a particular number
                 !_availClozeOrds(m, sfld, false).contains(ord)
-                // false
             } else {
                 emptyStandardCard(
                     m.getJSONArray("tmpls").getJSONObject(ord),
