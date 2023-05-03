@@ -38,7 +38,7 @@ object TemplateFilters {
     private val fHookFieldMod = Pattern.compile("^(.*?)(?:\\((.*)\\))?$")
 
     // const val CLOZE_REG = "(?si)\\{\\{(c)%s::(.*?)(::(.*?))?\\}\\}"
-    const val CLOZE_REG = "\\{\\{(c)%s::((?:(?=.*?\\{(?!.*?\\2)(.*\\}(?!.*\\3).*))(?=.*?\\}(?!.*?\\3)(.*)).)+?.*?(?=\\2)[^{]*(?=\\3\$)|.*?)(?:::(.*?))?\\}\\}"
+    const val CLOZE_REG = "(?si)\\{\\{(c)1::((?:(?=.*?\\{\\{(?!.*?\\3)(.*\\}\\}(?!.*\\4).*))(?=.*?\\}\\}(?!.*?\\4)(.*)).)+?.*?(?=\\3)(?!.*?\\{\\{).*(?=\\4(?:\\n|\$))|.*?)(?:::(.*?))?\\}\\}"
 
     /**
      * @param txtInput The content of the field field_name
@@ -138,13 +138,13 @@ object TemplateFilters {
             @KotlinCleanup("maybe make non-null")
             var buf: String?
             buf = if (type == 'q') {
-                if (!m.group(4).isNullOrEmpty()) {
-                    "[" + m.group(4) + "]"
+                if (!m.group(5).isNullOrEmpty()) {
+                    "[" + m.group(5) + "]"
                 } else {
                     CLOZE_DELETION_REPLACEMENT
                 }
             } else {
-                m.group(1) // m.group(2)
+                m.group(2)
             }
             if ("c" == m.group(1)) {
                 buf = "<span class=cloze>$buf</span>"
