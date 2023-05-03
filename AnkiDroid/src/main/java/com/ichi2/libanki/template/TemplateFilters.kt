@@ -138,8 +138,8 @@ object TemplateFilters {
             @KotlinCleanup("maybe make non-null")
             var buf: String?
             buf = if (type == 'q') {
-                if (!m.group(5).isNullOrEmpty()) {
-                    "[" + m.group(5) + "]"
+                if (!m.group(5 /*4*/).isNullOrEmpty()) {
+                    "[" + m.group(5 /*4*/) + "]"
                 } else {
                     CLOZE_DELETION_REPLACEMENT
                 }
